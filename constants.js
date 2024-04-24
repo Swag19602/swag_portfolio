@@ -15,7 +15,7 @@ export const METADATA = {
     "Devfolio",
     "Folio",
   ].join(", "),
-  image: "/projects/description.png",
+  image: "/projects/desc.png",
   language: "English",
 };
 
