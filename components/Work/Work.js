@@ -95,22 +95,6 @@ const Work = ({ clientWidth }) => {
     }, 3000);
   };
 
-  // useEffect(() => {
-  //   const revealTl = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-  //   revealTl.from(
-  //     targetSection.current.querySelectorAll(".seq"),
-  //     { opacity: 0, duration: 0.5, stagger: 0.5 },
-  //     "<"
-  //   );
-
-  //   ScrollTrigger.create({
-  //     trigger: targetSection.current.querySelector(".work-wrapper"),
-  //     start: "100px bottom",
-  //     end: `center center`,
-  //     animation: revealTl,
-  //     scrub: 0,
-  //   });
-  // }, [targetSection, isActive]);
 
   useEffect(() => {
     VanillaTilt.init(companyCard.current, options);
