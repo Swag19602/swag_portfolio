@@ -2,22 +2,20 @@ export const METADATA = {
   author: "Swagatam Bhattacharjee",
   title: "Portfolio | Swag",
   description:
-    "Swagatam Porwal is a Frontend Developer from Kuwait, interested in crafting beautiful and functional applications.",
-  siteUrl: "https://www.shubhporwal.me/",
+    "Swagatam Bhattacharjee is a Full Stack Developer from India, interested in crafting beautiful and functional applications.",
+  siteUrl: "https://swag-portfolio.vercel.app/",
   twitterHandle: "@allaboutSWAG6",
   keywords: [
     "Swagatam Bhattacharjee",
+    "Full Stack Developer",
     "Backend Developer",
-    "Web Developer",
-    "React Developer",
     "Software Developer",
     "Software Engineer",
     "Portfolio",
     "Devfolio",
     "Folio",
   ].join(", "),
-  image:
-    "https://res.cloudinary.com/dywdhyojt/image/upload/v1690572126/preview.png",
+  image: "/projects/desc.png",
   language: "English",
 };
 
