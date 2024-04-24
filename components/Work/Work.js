@@ -95,47 +95,47 @@ const Work = ({ clientWidth }) => {
     }, 3000);
   };
 
-  useEffect(() => {
-    const revealTl = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-    revealTl.from(
-      targetSection.current.querySelectorAll(".seq"),
-      { opacity: 0, duration: 0.5, stagger: 0.5 },
-      "<"
-    );
+  // useEffect(() => {
+  //   const revealTl = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+  //   revealTl.from(
+  //     targetSection.current.querySelectorAll(".seq"),
+  //     { opacity: 0, duration: 0.5, stagger: 0.5 },
+  //     "<"
+  //   );
 
-    ScrollTrigger.create({
-      trigger: targetSection.current.querySelector(".work-wrapper"),
-      start: "100px bottom",
-      end: `center center`,
-      animation: revealTl,
-      scrub: 0,
-    });
-  }, [targetSection, isActive]);
+  //   ScrollTrigger.create({
+  //     trigger: targetSection.current.querySelector(".work-wrapper"),
+  //     start: "100px bottom",
+  //     end: `center center`,
+  //     animation: revealTl,
+  //     scrub: 0,
+  //   });
+  // }, [targetSection, isActive]);
 
   useEffect(() => {
     VanillaTilt.init(companyCard.current, options);
   }, [companyCard.current]);
 
-  useEffect(() => {
-    if (inputRef.current) {
-      const handlePosition = () => {
-        const { top } = inputRef.current.getBoundingClientRect();
-        const scrollTop = document.documentElement.scrollTop;
-        const clientTop = document.documentElement.clientTop;
-        const output = Math.floor((top + scrollTop - clientTop) / 100) + 60;
-        heightRef.current = output;
-      };
+  // useEffect(() => {
+  //   if (inputRef.current) {
+  //     const handlePosition = () => {
+  //       const { top } = inputRef.current.getBoundingClientRect();
+  //       const scrollTop = document.documentElement.scrollTop;
+  //       const clientTop = document.documentElement.clientTop;
+  //       const output = Math.floor((top + scrollTop - clientTop) / 100) + 60;
+  //       heightRef.current = output;
+  //     };
 
-      handlePosition();
-      window.addEventListener("resize", handlePosition);
-      window.addEventListener("scroll", handlePosition);
-    }
+  //     handlePosition();
+  //     window.addEventListener("resize", handlePosition);
+  //     window.addEventListener("scroll", handlePosition);
+  //   }
 
-    return () => {
-      window.removeEventListener("resize", handlePosition);
-      window.removeEventListener("scroll", handlePosition);
-    };
-  }, [inputRef.current]);
+  //   return () => {
+  //     window.removeEventListener("resize", handlePosition);
+  //     window.removeEventListener("scroll", handlePosition);
+  //   };
+  // }, [inputRef.current]);
 
   return (
     <section

@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
   webpack(config, options) {
     config.module.rules.push({
-      test: /\.(mp3)$/i,
+      test: /\.(mp3|wav)$/i,
       loader: "file-loader",
       options: {
         outputPath: "public/sounds",
